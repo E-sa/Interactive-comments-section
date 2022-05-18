@@ -1,0 +1,354 @@
+$darkblue: hsl(238, 40%, 52%);
+$hoverblue: hsl(239, 57%, 85%);
+$tomatored: hsl(358, 79%, 66%);
+$palered: hsl(357, 100%, 86%);
+
+@font-face {
+    font-family: myFont;
+    src: url(../font/Rubik-VariableFont_wght.ttf);
+    font-weight: 400;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.comment-options-only-display-on-smallscreen {
+    display: none;
+}
+.scoreBox-and-buttons-on-small-screen {
+    display: none;
+}
+
+body {
+    background-color: hsl(228, 33%, 97%);
+    font-family: myFont;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+//each component
+.each-comment-container {
+    width: -webkit-fill-available;
+    display: inline-flex;
+    margin-bottom: 20px;
+    background: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 10px;
+
+    .content-p {
+        margin-right: auto;
+    }
+}
+
+.comment-header-and-content {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+//user image
+.user-image-size1 {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.user-image-size2 {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+//created at
+#createdAt {
+    display: inline;
+    color: #7c8186;
+    margin: 0;
+}
+
+// reply button
+.reply-button {
+    display: inline;
+    align-self: center;
+    color: $darkblue;
+    margin-left: auto;
+
+    &:hover {
+        color: $hoverblue;
+    }
+    &:hover :only-child {
+        fill: $hoverblue;
+    }
+}
+
+//score box
+.score-box-container {
+    width: 20px;
+    background-color: hsl(228, 33%, 97%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 5px;
+    border-radius: 6px;
+    margin-right: 15px;
+
+    .scoreBox_hover :hover {
+        fill: $darkblue;
+    }
+
+    .score-p {
+        color: $darkblue;
+        font-weight: bold;
+    }
+}
+
+//content
+.content-p {
+    color: #7c8186;
+    align-self: center;
+}
+
+.username {
+    margin: 0;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.replies-container {
+    border-left: 2px solid #e6e6e6;
+    padding-left: 22px;
+    margin-left: 22px;
+    margin-bottom: 7px;
+
+    #replyingTo-text {
+        color: $darkblue;
+        font-weight: bold;
+    }
+}
+
+.add-comment-container {
+    display: inline-flex;
+    margin-bottom: 20px;
+    background: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 10px;
+    width: -webkit-fill-available;
+    margin-top: 15px;
+
+    .add-comment-form {
+        display: flex;
+        width: 100%;
+    }
+
+    .add-comment-textarea {
+        width: 90%;
+        margin-left: 5px;
+        margin-right: 15px;
+        height: 60px;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        padding: 5px 10px;
+        resize: none;
+
+        ::placeholder {
+            color: #7c8186;
+        }
+
+        &:focus {
+            outline-color: rgb(95, 90, 131);
+        }
+    }
+
+    .add-commet-submit-button {
+        height: 30px;
+        width: 90px;
+        background-color: $darkblue;
+        border: none;
+        border-radius: 8px;
+        color: white;
+
+        &:hover {
+            background-color: $hoverblue;
+        }
+    }
+}
+
+.delete-and-edit-container {
+    display: flex;
+    margin-left: auto;
+
+    .trashbin-container {
+        color: $tomatored;
+        margin-right: 10px;
+
+        &:hover {
+            color: $palered;
+        }
+        &:hover :only-child {
+            fill: $palered;
+        }
+    }
+
+    .edit-button-container {
+        color: $darkblue;
+
+        &:hover {
+            color: $hoverblue;
+        }
+        &:hover :only-child {
+            fill: $hoverblue;
+        }
+    }
+}
+
+.delete-massage-container-parent {
+    height: auto;
+    position: absolute;
+    width: 100%;
+    height: 207%;
+    top: 0;
+    left: 0;
+    background: #0000006e;
+
+    .delete-massage-container {
+        background: white;
+        border-radius: 7px;
+        padding: 20px;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 230px;
+        left: calc(50vw - 125px);
+    }
+
+    .delete-massage-text {
+        color: #7c8186;
+    }
+
+    .delete-massage-buttons-container {
+        display: flex;
+        justify-content: space-around;
+
+        button[class*="delete-massage-buttons"] {
+            width: 45%;
+            height: 28px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+        }
+        button[class*="delete-massage-buttons-red"] {
+            background-color: $tomatored;
+        }
+        button[class*="delete-massage-buttons-grey"] {
+            background-color: #7c8186;
+        }
+    }
+}
+
+.edit-active-container {
+    .edit-textarea {
+        width: 90%;
+        height: 60px;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        padding: 5px 10px;
+        resize: none;
+        margin: 10px;
+        ::placeholder {
+            color: #7c8186;
+        }
+
+        &:focus {
+            outline-color: rgb(95, 90, 131);
+        }
+    }
+
+    .update-button {
+        height: 30px;
+        width: 90px;
+        background-color: $darkblue;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        float: right;
+
+        &:hover {
+            background-color: $hoverblue;
+        }
+    }
+}
+
+.comment-options, .reply-options {
+    margin-left: auto;
+}
+
+//small screen
+@media only screen and (max-width: 720px) {
+    .replies-container{
+        margin-left: 0;
+        padding-left:18px ;
+    }
+    .reply-options{
+        display: none;
+    }
+    .container {
+        width: 95%;
+        margin: 40px auto;
+    }
+    .score-box-container {
+        display: none;
+    }
+    .comment-options {
+        display: none;
+    }
+
+    .each-comment-container {
+        flex-direction: column-reverse;
+    }
+
+    .comment-options-only-display-on-smallscreen {
+        display: inline;
+    }
+
+    .scoreBox-and-buttons-on-small-screen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .score-box-container-sm {
+        background-color: hsl(228, 33%, 97%);
+
+        display: flex;
+
+        align-items: center;
+        padding: 8px 5px;
+        border-radius: 6px;
+        margin-right: 15px;
+
+        flex-direction: row;
+        width: 60px;
+        height: 15px;
+        justify-content: space-between;
+        .scoreBox_hover :hover {
+            fill: $darkblue;
+        }
+
+        .score-p {
+            color: $darkblue;
+            font-weight: bold;
+        }
+    }
+}
