@@ -34,6 +34,7 @@ body {
 //each component
 .each-comment-container {
     width: -webkit-fill-available;
+    width: -moz-available;
     display: inline-flex;
     margin-bottom: 20px;
     background: hsl(0, 0%, 100%);
@@ -144,6 +145,7 @@ body {
     padding: 15px;
     border-radius: 10px;
     width: -webkit-fill-available;
+    width: -moz-available;
     margin-top: 15px;
 
     .add-comment-form {
