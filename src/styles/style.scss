@@ -71,7 +71,7 @@ body {
 }
 
 //created at
-#createdAt {
+.createdAt {
     display: inline;
     color: #7c8186;
     margin: 0;
@@ -132,7 +132,7 @@ body {
     margin-left: 22px;
     margin-bottom: 7px;
 
-    #replyingTo-text {
+    .replyingTo-text {
         color: $darkblue;
         font-weight: bold;
     }

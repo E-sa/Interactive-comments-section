@@ -12,7 +12,7 @@ const Content: FC<one_arg_string> = ({ content, replyingTo }) => {
 
         <p className="content-p">
             {replyingTo &&
-                <span id="replyingTo-text">@{replyingTo} </span>
+                <span className="replyingTo-text">@{replyingTo} </span>
             }
             {content}
         </p>

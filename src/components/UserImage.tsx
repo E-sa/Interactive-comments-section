@@ -17,12 +17,12 @@ const UserImage: FC<avatar> = ({ image, size }) => {
 
                 size === 1 &&
 
-                <img className="user-image-size1" src={avatar} />
-            }
+                <img className="user-image-size1" alt="user-image" src={avatar} />
+            } 
             {
 
                 size === 2 &&
-                <img className="user-image-size2" src={avatar} />
+                <img className="user-image-size2" alt="user-image" src={avatar} />
             }
         </>
 

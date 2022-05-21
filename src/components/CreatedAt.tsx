@@ -7,7 +7,7 @@ interface Comment_time {
 
 const CreatedAt: FC<Comment_time> = ({createdAt}) => {
     return(
-        <p id="createdAt" >
+        <p className="createdAt" >
             {createdAt}
         </p>
     )

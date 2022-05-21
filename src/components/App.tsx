@@ -11,7 +11,7 @@ function App() {
 
 
     return (
-        <div className="container" >
+        <div className="container" role="main">
             {
                 theComments.map((comment, index) => {
 
